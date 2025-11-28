@@ -1,0 +1,27 @@
+package scenarios;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class scenarios18 {
+	public static void main(String[] args) throws Exception {
+	ChromeDriver driver = new ChromeDriver();
+	driver.manage().window().maximize();
+	Thread.sleep(2000);
+	driver.get("https://www.flipkart.com/");
+	Thread.sleep(2000);
+	WebElement search = driver.findElement(By.xpath("//input[@name='q']"));
+	search.sendKeys("iphone 11");
+	search.submit();
+	Thread.sleep(2000);
+	String pname = driver.findElement
+			(By.xpath("//div[text()='Apple iPhone 11 (Purple, 64 GB)']")).getText();
+	Thread.sleep(2000);
+	String pprice = driver.findElement(By.xpath("//div[text()='Apple iPhone 11 (Purple, 64 GB)']"
+			+ "/../following-sibling::div/div[contains(@class,'cN')]/div[contains(@class,'hl')]")).getText();
+	System.out.println(pname+"----"+pprice);
+	//driver.close();
+	
+}
+}

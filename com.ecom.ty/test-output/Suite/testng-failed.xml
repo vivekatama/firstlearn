@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="tc_Repository.Ad_01">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeDbConnection"/>
+          <include name="adminModule"/>
+          <include name="logoutUser"/>
+          <include name="connectDatabae"/>
+          <include name="loginUser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tc_Repository.Ad_01 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="Test1(failed)">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="tc_Repository.Ad_01">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeDbConnection"/>
+          <include name="adminModule"/>
+          <include name="logoutUser"/>
+          <include name="connectDatabae"/>
+          <include name="loginUser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tc_Repository.Ad_01 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

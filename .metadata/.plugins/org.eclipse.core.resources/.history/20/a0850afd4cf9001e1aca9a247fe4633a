@@ -1,0 +1,20 @@
+package Locaters;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Assignment1 {
+public static void main(String[] args) throws Exception {
+	// launch the chrome browser
+	ChromeDriver driver = new ChromeDriver();
+	 // maximize the window
+	driver.manage().window().maximize();
+	Thread.sleep(3000);
+	// Step 2: Access any website 
+	driver.get("https://www.flipkart.com/");
+	// search for iphone 11
+	driver.get("https://www.flipkart.com/search?q=iphone+11&as=on&as-show=on&otracker=AS_Query_OrganicAutoSuggest_3_9_na_na_na&otracker1=AS_Query_OrganicAutoSuggest_3_9_na_na_na&as-pos=3&as-type=RECENT&suggestionId=iphone+11&requestId=bb322fa6-bf1e-44a8-910c-2a77ceb2b3c2&as-searchtext=iphone%2011");
+	// fetch url
+	String url = driver.getCurrentUrl();
+	System.out.println(url);
+}
+}
